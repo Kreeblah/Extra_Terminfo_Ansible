@@ -1,7 +1,13 @@
 ---
-- name: Install Ghostty terminfo
+- name: Install extra terminfo definitions
   hosts: all
   become: yes
-  roles:
-    - ghostty_terminfo
-    - kitty_terminfo
+  tasks:
+    - include_role:
+        name: extra_terminfo
+      vars:
+        terminal_type: "ghostty"
+    - include_role:
+        name: extra_terminfo
+      vars:
+        terminal_type: "kitty"
