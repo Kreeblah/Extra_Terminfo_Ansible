@@ -1,0 +1,6 @@
+---
+- name: Install Ghostty terminfo
+  hosts: all
+  become: yes
+  roles:
+    - ghostty_terminfo
