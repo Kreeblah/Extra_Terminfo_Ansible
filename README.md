@@ -3,5 +3,6 @@ Ansible role and playbook for installing a terminfo file for terminals that the 
 
 Current terminfos:
 
-- Ghostty
+- alacritty
+- ghostty
 - kitty

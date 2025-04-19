@@ -6,6 +6,10 @@
     - include_role:
         name: extra_terminfo
       vars:
+        terminal_type: "alacritty"
+    - include_role:
+        name: extra_terminfo
+      vars:
         terminal_type: "ghostty"
     - include_role:
         name: extra_terminfo
