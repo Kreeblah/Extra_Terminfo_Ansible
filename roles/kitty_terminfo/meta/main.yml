@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  namespace: kreeblah
+  role_name: kitty_terminfo
+  author: Chris Gelatt
+  description: Install terminfo for kitty
+
+  license: AGPL-3.0-or-later
+
+  min_ansible_version: "2.17"
+
+  galaxy_tags:
+    - kitty
+    - system
+    - server
+
+dependencies: []
