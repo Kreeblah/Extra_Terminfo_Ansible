@@ -1,14 +1,12 @@
 - name: Create temporary directory for uncompiled {{ terminal_type }} terminfo file
   ansible.builtin.tempfile:
     state: file
-    prefix: "{{ terminal_type }}_terminfo_"
-    suffix: .txt
   register: terminfo_file
   changed_when: false
 
 - name: Copy {{ terminal_type }} terminfo definition to remote host
   ansible.builtin.copy:
-    src: "{{ terminal_type }}_terminfo.txt"
+    src: "{{ terminal_type }}"
     dest: "{{ terminfo_file.path }}"
     mode: 0644
   changed_when: false
