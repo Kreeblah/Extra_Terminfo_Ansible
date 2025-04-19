@@ -4,3 +4,4 @@
   become: yes
   roles:
     - ghostty_terminfo
+    - kitty_terminfo
