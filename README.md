@@ -6,3 +6,4 @@ Current terminfos:
 - alacritty
 - ghostty
 - kitty
+- wezterm
