@@ -1,4 +1,4 @@
-- name: Create temporary directory for uncompiled {{ terminal_type }} terminfo file
+- name: Create temporary file for uncompiled {{ terminal_type }} terminfo definition
   ansible.builtin.tempfile:
     state: file
   register: terminfo_file
