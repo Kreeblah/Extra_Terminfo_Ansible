@@ -6,16 +6,27 @@
     - include_role:
         name: extra_terminfo
       vars:
-        terminal_type: "alacritty"
+        terminal_type: alacritty
+        terminal_names:
+          - alacritty
+          - alacritty+common
+          - alacritty-direct
     - include_role:
         name: extra_terminfo
       vars:
-        terminal_type: "ghostty"
+        terminal_type: ghostty
+        terminal_names:
+          - ghostty
+          - xterm-ghostty
     - include_role:
         name: extra_terminfo
       vars:
         terminal_type: "kitty"
+        terminal_names:
+          - xterm-kitty
     - include_role:
         name: extra_terminfo
       vars:
         terminal_type: "wezterm"
+        terminal_names:
+          - wezterm

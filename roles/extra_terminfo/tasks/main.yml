@@ -15,6 +15,19 @@
   ansible.builtin.shell:
     cmd: tic -x "{{ terminfo_file.path }}"
 
+- name: Get terminfo database paths
+  ansible.builtin.shell:
+    cmd: tic -D
+  register: terminfo_db_location
+
+- name: Ensure permissions are correct for {{ terminal_type }} terminfo
+  ansible.builtin.file:
+    path: "{{ terminfo_db_location.stdout_lines[0] }}/{{ item[:1] }}/{{ item }}"
+    state: file
+    mode: 0644
+  with_items:
+    - "{{ terminal_names }}"
+
 - name: Delete uncompiled {{ terminal_type }} terminfo file
   ansible.builtin.file:
     path: "{{ terminfo_file.path }}"
